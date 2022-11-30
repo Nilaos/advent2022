@@ -1,3 +1,10 @@
+use aoc_driver::*;
+
+fn solution(i: &str) -> String {
+    unimplemented!()
+}
+
 fn main() {
-    println!("Hello, world!");
+    let session = std::fs::read_to_string("../.session.txt").unwrap();
+    aoc_magic!(&session, 2022:1:1, solution).unwrap()
 }
