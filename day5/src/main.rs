@@ -3,8 +3,6 @@ use std::collections::VecDeque;
 use aoc_driver::*;
 
 fn solution(i: &str) -> String {
-    // let mut score = 0;
-
     let lines: Vec<&str> = i.split('\n').collect();
 
     let mut stacks: Vec<VecDeque<char>> = vec![VecDeque::new(); 9];
@@ -32,18 +30,19 @@ fn solution(i: &str) -> String {
     for l in &lines[10..] {
         let instruction: Vec<&str> = l.split_ascii_whitespace().collect();
 
-        let src = instruction[3].parse::<i32>().unwrap() - 1;
-        let dst = instruction[5].parse::<i32>().unwrap() - 1;
+        let num = instruction[1].parse::<usize>().unwrap();
+        let src = instruction[3].parse::<usize>().unwrap() - 1;
+        let dst = instruction[5].parse::<usize>().unwrap() - 1;
         // Ended up just modifying this one rather than writing a second one today
         let mut crates = VecDeque::new();
-        for _i in 0..instruction[1].parse::<usize>().unwrap() {
-            let data: char = stacks[src as usize].pop_back().unwrap();
+        for _i in 0..num {
+            let data: char = stacks[src].pop_back().unwrap();
             crates.push_front(data);
         }
 
-        for _i in 0..instruction[1].parse::<usize>().unwrap() {
+        for _i in 0..num {
             let data = crates.pop_front().unwrap();
-            stacks[dst as usize].push_back(data);
+            stacks[dst].push_back(data);
         }
     }
 
@@ -58,7 +57,7 @@ fn solution(i: &str) -> String {
     }
     println!("{str}");
     // panic!();
-    // score.to_string()
+
     str
 }
 
