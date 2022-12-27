@@ -3,9 +3,9 @@ use aoc_driver::*;
 fn solution(i: &str) -> String {
     // let mut v = vec![0];
     // let mut idx = 0;
-    let mut score = 0;
+    let _score = 0;
 
-    let lines = i.split('\n');
+    let _lines = i.split('\n');
 
     todo!();
 }

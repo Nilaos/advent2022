@@ -1,5 +1,3 @@
-use std::collections::VecDeque;
-
 use aoc_driver::*;
 
 #[derive(Debug)]
@@ -8,10 +6,10 @@ enum Instr {
     Noop,
 }
 
-struct AddxCallback {
-    deadline: i32,
-    action: i32,
-}
+// struct AddxCallback {
+//     deadline: i32,
+//     action: i32,
+// }
 
 impl TryFrom<&str> for Instr {
     type Error = String;

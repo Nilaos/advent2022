@@ -1,7 +1,4 @@
-use std::{
-    fmt::Display,
-    io::{stdin, Read},
-};
+use std::fmt::Display;
 
 use aoc_driver::*;
 
@@ -73,7 +70,7 @@ fn solution(i: &str) -> String {
     });
 
     println!("{total}");
-    todo!();
+    // todo!();
     total.to_string()
 }
 
@@ -91,14 +88,14 @@ impl Display for Position {
     }
 }
 
-fn print_grid(grid: &Vec<Vec<Position>>) {
-    for l in grid.iter().rev() {
-        for c in l {
-            print!("{c}");
-        }
-        print!("\n");
-    }
-}
+// fn print_grid(grid: &Vec<Vec<Position>>) {
+//     for l in grid.iter().rev() {
+//         for c in l {
+//             print!("{c}");
+//         }
+//         print!("\n");
+//     }
+// }
 
 fn main() {
     let session = std::fs::read_to_string("../.session.txt").unwrap();

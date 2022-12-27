@@ -1,4 +1,4 @@
-use std::{collections::HashMap, fs, rc::Rc, sync::RwLock};
+use std::{collections::HashMap, rc::Rc, sync::RwLock};
 
 use aoc_driver::*;
 
