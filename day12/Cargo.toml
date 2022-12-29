@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 aoc_driver = "0.3.5"
+termion = "2.0.1"
